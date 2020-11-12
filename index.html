@@ -5,56 +5,36 @@
     <title>Master 2 MIAGE</title>
     <meta content="Site web du Master 2 MIAGE" name="description">
     <meta content="Maxime Rose" name="author">
-    <link href="fontawesome-free-5.15.1-web/css/all.min.css"/>
-    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
-    <link href="css/style.css"/>
+    <link href="fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <!--    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">-->
 </head>
 <body>
-<header class="bg-dark">
-    <div class="row justify-content-between">
-        <a href="index.html">
-            <img alt="" class="img-fluid" src="img/logo.svg">
-        </a>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<header class="bg-dark d-flex justify-content-between">
+    <img alt="" class="img-fluid" src="img/logo.svg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button">
+            <i class="fa fa-bars"></i>
+        </button>
 
-            <div class="collapse navbar-collapse" id="desktop-menu">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Espace entreprises</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Espace presse</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse" id="mobile-menu">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Espace entreprises</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Espace presse</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Espace entreprises</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Espace presse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 <main>
     <div class="container-fluid">
@@ -63,8 +43,8 @@
             plerumque ad eum locum ubi aliquando pastae sunt revertuntur, ita homines instar turbinis degressi montibus
             impeditis et arduis loca petivere mari connia, per quae viis latebrosis sese convallibusque occultantes cum
             appeterent noctes luna etiam tum cornuta.</p>
-        <div class="row">
-            <div class="col">
+        <section class="d-flex">
+            <article class="col-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Objectifs</h5>
@@ -77,8 +57,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+            </article>
+            <article class="col-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Admission</h5>
@@ -91,8 +71,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+            </article>
+            <article class="col-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Organisation</h5>
@@ -105,12 +85,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     </div>
 </main>
-<footer class="bg-dark mt-4">
-    <p class="py-5 m-0 text-center text-light">Copyright © <strong>Master 2 MIAGE 2COM</strong></p>
+<footer class="bg-dark">
+    <p class="text-center text-light">Copyright © <strong>Master 2 MIAGE 2COM</strong></p>
 </footer>
 <script src="js/script.js"></script>
 </body>
