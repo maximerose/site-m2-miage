@@ -5,36 +5,39 @@
     <title>Master 2 MIAGE</title>
     <meta content="Site web du Master 2 MIAGE" name="description">
     <meta content="Maxime Rose" name="author">
+    <link href="img/favicon.ico" rel="icon" type="image/png"/>
     <link href="fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
     <!--    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
-    <!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">-->
+    <!--    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>-->
 </head>
 <body>
-<header class="bg-dark d-flex justify-content-between">
-    <img alt="" class="img-fluid" src="img/logo.svg">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button">
-            <i class="fa fa-bars"></i>
-        </button>
+<header class="bg-dark">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between">
+            <img alt="" class="img-fluid" src="img/logo.svg">
+            <nav>
+                <button id="menu-toggler" type="button">
+                    <span id="burger-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Espace entreprises</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Espace presse</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+                <ul id="main-menu">
+                    <li class="active">
+                        <a href="index.html">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#">Espace entreprises</a>
+                    </li>
+                    <li>
+                        <a href="#">Espace presse</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </div>
 </header>
 <main>
     <div class="container-fluid">
@@ -43,46 +46,49 @@
             plerumque ad eum locum ubi aliquando pastae sunt revertuntur, ita homines instar turbinis degressi montibus
             impeditis et arduis loca petivere mari connia, per quae viis latebrosis sese convallibusque occultantes cum
             appeterent noctes luna etiam tum cornuta.</p>
-        <section class="d-flex">
-            <article class="col-4">
+
+        <section>
+            <article class="col col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Objectifs</h5>
+                        <h2 class="card-title"><i class="fa fa-graduation-cap"></i> Objectifs</h2>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
                             occiduntur...</p>
-                        <div class="card-bottom text-center">
-                            <a class="btn btn-primary" href="#">+ d'infos</a>
-                        </div>
+                    </div>
+                    <div class="card-bottom text-center">
+                        <a class="btn btn-primary" href="#">+ d'infos</a>
                     </div>
                 </div>
             </article>
-            <article class="col-4">
+
+            <article class="col col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Admission</h5>
+                        <h2 class="card-title"><i class="fa fa-compass"></i> Admission</h2>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
                             occiduntur...</p>
-                        <div class="card-bottom text-center">
-                            <a class="btn btn-primary" href="#">+ d'infos</a>
-                        </div>
+                    </div>
+                    <div class="card-bottom text-center">
+                        <a class="btn btn-primary" href="#">+ d'infos</a>
                     </div>
                 </div>
             </article>
-            <article class="col-4">
+
+            <article class="col col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Organisation</h5>
+                        <h2 class="card-title"><i class="fa fa-calendar-alt"></i> Organisation</h2>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
                             occiduntur...</p>
-                        <div class="card-bottom text-center">
-                            <a class="btn btn-primary" href="#">+ d'infos</a>
-                        </div>
+                    </div>
+                    <div class="card-bottom text-center">
+                        <a class="btn btn-primary" href="#">+ d'infos</a>
                     </div>
                 </div>
             </article>
@@ -90,7 +96,9 @@
     </div>
 </main>
 <footer class="bg-dark">
-    <p class="text-center text-light">Copyright © <strong>Master 2 MIAGE 2COM</strong></p>
+    <div class="container-fluid">
+        <p class="text-center text-light">Copyright © <strong>Master 2 MIAGE 2COM</strong></p>
+    </div>
 </footer>
 <script src="js/script.js"></script>
 </body>
