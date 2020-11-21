@@ -9,29 +9,28 @@
     <link href="fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
     <!--    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
-    <!--    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>-->
+    <!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>-->
 </head>
 <body>
 <header class="bg-dark">
     <div class="container-fluid">
         <div class="d-flex justify-content-between">
             <img alt="" class="img-fluid" src="img/logo.svg">
-            <nav>
+            <nav class="navbar">
                 <button id="menu-toggler" type="button">
                     <span id="burger-icon"></span>
                 </button>
-
-                <ul id="main-menu">
-                    <li class="active">
+                <ul class="nav-list" id="main-menu">
+                    <li class="nav-item active">
                         <a href="index.html">Accueil</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="#">Espace entreprises</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="#">Espace presse</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="#">Contact</a>
                     </li>
                 </ul>
@@ -39,19 +38,19 @@
         </div>
     </div>
 </header>
-<main>
+<main id="main">
     <div class="container-fluid">
         <h1>Bienvenue !</h1>
         <p>Bienvenue dans le site du Master 2 MIAGE 2COM. Atque, ut Tullius ait, ut etiam ferae fame monitae
             plerumque ad eum locum ubi aliquando pastae sunt revertuntur, ita homines instar turbinis degressi montibus
-            impeditis et arduis loca petivere mari connia, per quae viis latebrosis sese convallibusque occultantes cum
+            impeditis et arduis loca petivere mari conusia, per quae viis latebrosis sese convallibusque occultantes cum
             appeterent noctes luna etiam tum cornuta.</p>
 
         <section>
-            <article class="col col-md-4">
+            <article class="col-12 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title"><i class="fa fa-graduation-cap"></i> Objectifs</h2>
+                        <h2><i class="fa fa-graduation-cap"></i> Objectifs</h2>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
@@ -63,10 +62,10 @@
                 </div>
             </article>
 
-            <article class="col col-md-4">
+            <article class="col-12 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title"><i class="fa fa-compass"></i> Admission</h2>
+                        <h2><i class="fa fa-compass"></i> Admission</h2>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
@@ -78,10 +77,10 @@
                 </div>
             </article>
 
-            <article class="col col-md-4">
+            <article class="col-12 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title"><i class="fa fa-calendar-alt"></i> Organisation</h2>
+                        <h2><i class="fa fa-calendar-alt"></i> Organisation</h2>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
@@ -96,9 +95,7 @@
     </div>
 </main>
 <footer class="bg-dark">
-    <div class="container-fluid">
-        <p class="text-center text-light">Copyright © <strong>Master 2 MIAGE 2COM</strong></p>
-    </div>
+    <p>Copyright © <strong class="active">Master 2 MIAGE 2COM</strong></p>
 </footer>
 <script src="js/script.js"></script>
 </body>

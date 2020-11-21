@@ -1,9 +1,13 @@
 /* STRUCTURE */
+html {
+    font-size: 62.5%;
+}
+
 body {
     background-color: #fff;
     color: #212529;
-    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1rem;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
@@ -23,6 +27,7 @@ body {
 }
 
 section {
+    align-items: stretch;
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
@@ -36,13 +41,23 @@ section article {
     width: 100%;
 }
 
-.col {
-    flex-basis: 0;
-    flex-grow: 1;
+section article:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.col-12 {
+    flex: 0 0 100%;
     max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
+    .col, .col-4 {
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        width: 100%;
+    }
+
     .col-md-4 {
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
@@ -81,8 +96,11 @@ a {
 
 /* HEADER */
 header {
-    height: 70px;
-    max-height: 70px;
+    height: 7rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 header img {
@@ -94,7 +112,7 @@ header img {
     color: #fff;
 }
 
-header nav {
+.navbar {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
@@ -104,32 +122,138 @@ header nav {
     position: relative;
 }
 
-header nav ul {
+.nav-list {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin-bottom: 0;
+    margin-top: 0;
     padding-left: 0;
 }
 
-header nav ul li a {
+.nav-item a {
     color: rgba(255, 255, 255, .5);
     padding: 0.5rem 1rem;
 }
 
-header nav ul li.active a {
+.nav-item.active a {
     color: #fff;
 }
 
-@media screen and (min-width: 576px) {
-    header nav button {
+#menu-toggler {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    height: 60px;
+    padding: 0;
+    position: relative;
+    transition: ease-in-out 0.5s;
+    width: 60px;
+}
+
+#menu-toggler:focus {
+    background: transparent !important;
+    border: 0 !important;
+    outline: none !important;
+}
+
+#menu-toggler.rotate {
+    transform: rotate(180deg);
+}
+
+#burger-icon.active {
+    background: #353a40;
+}
+
+#burger-icon {
+    background: #FFF;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    height: 0.25rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: ease-in-out 0.3s;
+    width: 2rem;
+}
+
+#burger-icon::before, #burger-icon::after {
+    background: #FFF;
+    border-radius: 0.25rem;
+    content: '';
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: transform 0.3s;
+    width: 2rem;
+}
+
+#burger-icon::before {
+    transform: translateY(-10px);
+}
+
+#burger-icon::after {
+    transform: translateY(10px);
+}
+
+#burger-icon.active::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+#burger-icon.active::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-list.active {
+        background: #353a40;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 7rem);
+        position: fixed;
+        right: 0;
+        top: 7rem;
+        z-index: 1000;
+    }
+
+    .nav-item {
+        border-bottom: solid 1px #fff;
+        font-size: 2rem;
+        padding: 1rem;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #menu-toggler {
         display: none;
     }
 }
 
 /** MAIN */
 main {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
+    position: relative;
+    top: 7rem;
+}
+
+.darker {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+    font-weight: 500;
+    margin-top: 0;
 }
 
 .card {
@@ -146,12 +270,9 @@ main {
 }
 
 .card-body h2 {
-    font-size: 2rem;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: .75rem;
     margin-top: 0;
-    padding: 1.25rem;
 }
 
 .card-bottom {
@@ -168,6 +289,7 @@ main {
     text-align: center;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     vertical-align: middle;
+    z-index: 0;
 }
 
 .btn:focus, .btn:hover {
@@ -188,6 +310,10 @@ main {
 
 /** FOOTER */
 footer {
-    padding-bottom: 2em;
-    padding-top: 2em;
+    align-items: center;
+    display: flex;
+    height: 9rem;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
 }
