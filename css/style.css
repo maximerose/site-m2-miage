@@ -238,7 +238,7 @@ header img {
     #mobile-menu {
         background: #353a40;
         height: calc(100vh - 5rem);
-        position: absolute;
+        position: fixed;
         top: -100vh;
         transition: all 0.5s ease-in-out;
         width: 100%;
@@ -251,9 +251,6 @@ header img {
     }
 
     #mobile-menu.active {
-        bottom: 0;
-        left: 0;
-        right: 0;
         top: 5rem;
     }
 
@@ -271,10 +268,6 @@ header img {
 
     main {
         margin-top: 5rem;
-    }
-
-    .menu-open {
-        overflow: hidden;
     }
 }
 
