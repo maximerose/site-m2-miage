@@ -7,9 +7,9 @@
     <meta content="Maxime Rose" name="author">
     <link href="img/favicon.ico" rel="icon" type="image/png"/>
     <link href="fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet"/>
+    <!--        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+    <!--        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>-->
     <link href="css/style.css" rel="stylesheet"/>
-    <!--    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
-    <!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>-->
 </head>
 <body>
 <header class="bg-dark">
@@ -56,6 +56,46 @@
 </nav>
 
 <main id="main">
+    <div class="carousel slide" data-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+            <ol class="carousel-indicators" id="carousel-indicators">
+                <li class="active" data-slide-to="0"></li>
+                <li data-slide-to="1"></li>
+                <li data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-item active" data-item="0">
+                <img alt="Groupe de personnes qui sourient et lèvent le pouce" class="img-fluid"
+                     src="img/carousel/image-0.jpg">
+                <div class="carousel-caption">
+                    <h2>Boostez votre avenir !</h2>
+                    <p>Le Master 2 MIAGE vous permet de booster votre avenir.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-item="1">
+                <img alt="Groupe de personnes qui discutent autour d'une table de travail" class="img-fluid"
+                     src="img/carousel/image-1.jpg">
+                <div class="carousel-caption">
+                    <h2>Image 2 !</h2>
+                    <p>Légende pour illustrer la deuxième image.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-item="2">
+                <img alt="Groupe de personnes qui discutent dans une salle de pause" class="img-fluid"
+                     src="img/carousel/image-2.jpg">
+                <div class="carousel-caption">
+                    <h2>Image 3 !</h2>
+                    <p>Légende pour illustrer la troisième image.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-slide="prev" href="#carousel" id="carousel-prev">
+            <span class="carousel-control-prev-icon"><i class="fa fa-angle-left"></i></span>
+        </button>
+        <button class="carousel-control-next" data-slide="next" id="carousel-next" role="button">
+            <span class="carousel-control-next-icon"><i class="fa fa-angle-right"></i></span>
+        </button>
+    </div>
+
     <div class="container-fluid">
         <h1>Bienvenue !</h1>
         <p>Bienvenue dans le site du Master 2 MIAGE 2COM. Atque, ut Tullius ait, ut etiam ferae fame monitae
@@ -114,6 +154,15 @@
 <footer class="bg-dark">
     <p>Copyright © <strong class="active">Master 2 MIAGE 2COM</strong></p>
 </footer>
+<!--<script crossorigin="anonymous"-->
+<!--        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+<!--        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+<!--<script crossorigin="anonymous"-->
+<!--        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
+<!--        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
+<!--<script crossorigin="anonymous"-->
+<!--        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
+<!--        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
 <script src="js/script.js"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     margin: 0;
+    overflow-x: hidden;
     position: relative;
     z-index: 0;
 }
@@ -133,8 +134,13 @@ header img {
 
 .nav-item a {
     color: rgba(255, 255, 255, .5);
+    height: 100%;
     padding: 0.5rem 1rem;
     transition: color 0.2s ease-in-out;
+}
+
+#desktop-menu .nav-item a {
+    width: 100%;
 }
 
 .nav-item a:hover {
@@ -216,7 +222,7 @@ header img {
         height: 5rem;
         position: fixed;
         top: 0;
-        z-index: 10;
+        z-index: 25;
     }
 
     #menu-toggler {
@@ -242,7 +248,7 @@ header img {
         top: -100vh;
         transition: all 0.5s ease-in-out;
         width: 100%;
-        z-index: 2;
+        z-index: 20;
     }
 
     #mobile-menu .nav-list {
@@ -255,6 +261,7 @@ header img {
     }
 
     #mobile-menu .nav-item {
+        align-items: center;
         display: flex;
         justify-content: center;
     }
@@ -279,6 +286,119 @@ header img {
     #mobile-menu {
         display: none;
     }
+}
+
+/** CAROUSEL */
+.carousel {
+    position: relative;
+}
+
+.carousel-inner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-item {
+    align-items: center;
+    backface-visibility: hidden;
+    display: none;
+    max-height: 50rem;
+    perspective: 1000px;
+    position: relative;
+    transition: transform .6s ease;
+    width: 100%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    align-items: center;
+    appearance: none;
+    background: transparent;
+    border: none;
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: all 0.3s ease;
+    width: 5%;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-next:hover,
+.carousel-control-next:focus,
+.carousel-control-next:active,
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:active {
+    appearance: none;
+    background: rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    font-size: 3em;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 255, 0.5);
+    bottom: 2rem;
+    color: #fff;
+    left: 5%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    position: absolute;
+    right: 5%;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators {
+    bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    list-style: none;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 15;
+}
+
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 100%;
+    cursor: pointer;
+    flex: 0 1 auto;
+    height: 1rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 1rem;
+}
+
+.carousel-indicators li.active {
+    background-color: #fff;
 }
 
 /** MAIN */
