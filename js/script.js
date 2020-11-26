@@ -1,4 +1,4 @@
-const INTERVAL = 40;
+const INTERVAL = 4000;
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
@@ -52,7 +52,9 @@ document.onreadystatechange = () => {
             if (!indicators[index].classList.contains('active')) {
                 indicators[index].classList.add('active');
             }
-        };
+
+            carousel.dispatchEvent(new Event('change'));
+        }
 
 
         let slide = (direction) => {
@@ -88,6 +90,8 @@ document.onreadystatechange = () => {
 
             activeItem = getActiveElements().item;
             activeIndicator = getActiveElements().indicator;
+
+            carousel.dispatchEvent(new Event('change'));
         }
 
         let indicatorsLi = document.querySelectorAll('.carousel-indicators li');
@@ -105,5 +109,39 @@ document.onreadystatechange = () => {
         next.onclick = () => {
             slide(1);
         };
+
+        let carouselTimer = {};
+
+        let carouselInterval = setInterval(() => {
+            slide(1)
+        }, INTERVAL);
+
+        carouselTimer.start = () => {
+            carouselInterval = setInterval(() => {
+                slide(1)
+            }, INTERVAL);
+        }
+
+        carouselTimer.stop = () => {
+            clearInterval(carouselInterval);
+        }
+
+        carouselTimer.restart = () => {
+            carouselTimer.stop();
+            carouselTimer.start();
+        }
+
+        carousel.addEventListener('change', () => {
+            carouselTimer.restart();
+        });
+
+        carousel.addEventListener('mouseover', () => {
+            carouselTimer.stop();
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            carouselTimer.start();
+        });
     }
 };
+
