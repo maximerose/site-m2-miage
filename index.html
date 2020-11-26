@@ -7,8 +7,6 @@
     <meta content="Maxime Rose" name="author">
     <link href="img/favicon.ico" rel="icon" type="image/png"/>
     <link href="fontawesome-free-5.15.1-web/css/all.min.css" rel="stylesheet"/>
-    <!--        <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
-    <!--        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"/>-->
     <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -88,26 +86,28 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" data-slide="prev" href="#carousel" id="carousel-prev">
-            <span class="carousel-control-prev-icon"><i class="fa fa-angle-left"></i></span>
+        <button class="carousel-control-prev" data-slide="prev" id="carousel-prev">
+            <span class="carousel-control-prev-icon"><em class="fa fa-angle-left"></em></span>
         </button>
-        <button class="carousel-control-next" data-slide="next" id="carousel-next" role="button">
-            <span class="carousel-control-next-icon"><i class="fa fa-angle-right"></i></span>
+        <button class="carousel-control-next" data-slide="next" id="carousel-next">
+            <span class="carousel-control-next-icon"><em class="fa fa-angle-right"></em></span>
         </button>
     </div>
 
     <div class="container-fluid">
-        <h1>Bienvenue !</h1>
+        <h1>Bienvenue !</h1> <!-- Pas très SEO de mettre "Bienvenue" en H1... -->
         <p>Bienvenue dans le site du Master 2 MIAGE 2COM. Atque, ut Tullius ait, ut etiam ferae fame monitae
             plerumque ad eum locum ubi aliquando pastae sunt revertuntur, ita homines instar turbinis degressi montibus
             impeditis et arduis loca petivere mari conusia, per quae viis latebrosis sese convallibusque occultantes cum
             appeterent noctes luna etiam tum cornuta.</p>
 
         <section>
+            <h2 class="d-none">Présentation du Master MIAGE</h2>
+            <!-- Obligé de mettre un H2 à l'ouverture de la balise section pour respecter le W3C -->
             <article class="col-12 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2><i class="fa fa-graduation-cap"></i> Objectifs</h2>
+                        <h3><em class="fa fa-graduation-cap"></em> Objectifs</h3>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
@@ -122,7 +122,7 @@
             <article class="col-12 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2><i class="fa fa-compass"></i> Admission</h2>
+                        <h3><em class="fa fa-compass"></em> Admission</h3>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
@@ -137,7 +137,7 @@
             <article class="col-12 col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h2><i class="fa fa-calendar-alt"></i> Organisation</h2>
+                        <h3><em class="fa fa-calendar-alt"></em> Organisation</h3>
                         <p class="card-text">Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
                             quaedam, non nulla levius Crateras nomine pervenissent, villam scilicet suam quae ab
                             Antiochia vicensimo et quarto disiungitur lapide, ut mandatum est, fractis cruribus
@@ -154,15 +154,6 @@
 <footer class="bg-dark">
     <p>Copyright © <strong class="active">Master 2 MIAGE 2COM</strong></p>
 </footer>
-<!--<script crossorigin="anonymous"-->
-<!--        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
-<!--        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
-<!--<script crossorigin="anonymous"-->
-<!--        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
-<!--        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
-<!--<script crossorigin="anonymous"-->
-<!--        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
-<!--        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
 <script src="js/script.js"></script>
 </body>
 </html>

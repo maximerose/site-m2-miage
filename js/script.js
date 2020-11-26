@@ -1,4 +1,4 @@
-const INTERVAL = 4000;
+const INTERVAL = 3000;
 
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
